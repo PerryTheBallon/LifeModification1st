@@ -19,21 +19,6 @@ com = str("")
 buffer1 = ""
 buffer2 = ""
 start = "true"
-settings = open("LifeModification/configs/system.cfg", "r")                  #base
-buffer = settings.read()
-if(buffer == "linux\n"):
-    clean = "clear"
-    syst = "| base system: LINUX   |"
-if(buffer == "windows\n"):
-    clean = "cls"
-    syst = "| base system: WINDOWS |"
-settings.close()
-print("")
-print("Starting Simulation...")
-time.sleep(1)
-print("")
-print(TextColor.GREEN + "Starting Simulation...Done!" + TextColor.RESET)
-time.sleep(0.5)
 print("")
 print(TextColor.RED + "╔╗  ╔══╗╔══╗╔═══╗   ╔╗  ╔╗╔══╗╔══╗ ╔══╗╔══╗╔══╗╔══╗╔══╗╔════╗╔══╗╔══╗╔╗ ╔╗" + TextColor.RESET)
 print(TextColor.RED + "║║  ╚╗╔╝║╔═╝║╔══╝   ║║  ║║║╔╗║║╔╗╚╗╚╗╔╝║╔═╝╚╗╔╝║╔═╝║╔╗║╚═╗╔═╝╚╗╔╝║╔╗║║╚═╝║" + TextColor.RESET)
@@ -110,19 +95,6 @@ while(start == "true"):
         buffer = input("Input string: ")
         print(buffer)
     if(com=="logout" or com == "exit" or com=="shutdown"):
-        os.system(clean)
-        print("Shutting Down.")
-        time.sleep(0.5)
-        os.system(clean)
-        print("Shutting Down..")
-        time.sleep(0.5)
-        os.system(clean)
-        print("Shutting Down...")
-        time.sleep(0.5)
-        os.system(clean)
+        print("")
         print("Shutting Down...Done!")
-        time.sleep(0.5)
-        print("")
-        print(TextColor.GREEN + "Simulating Done!" + TextColor.RESET)
-        print("")
         start = "false"
